@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+
 import { IsLoggedInContext } from './App';
 import NavbarCSS from '../css/Navbar.module.css';
-
 import Storage from '../services/storage';
 
 function Navbar() {
