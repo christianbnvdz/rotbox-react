@@ -11,6 +11,10 @@
   color: #F00;
 }
 
+.success {
+  color: #11AA86;
+}
+
 .form {
   text-align: center;
 }
