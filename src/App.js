@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
 import './App.css';
 import Navbar from './Navbar';
 
@@ -8,9 +9,11 @@ function App() {
   const [isLoggedIn, setLoggedInStatus] = useState(false);
 
   return (
-    <IsLoggedInContext.Provider value={{isLoggedIn, setLoggedInStatus}}>
-      <Navbar />
-    </IsLoggedInContext.Provider>
+    <BrowserRouter>
+      <IsLoggedInContext.Provider value={{isLoggedIn, setLoggedInStatus}}>
+        <Navbar />
+      </IsLoggedInContext.Provider>
+    </BrowserRouter>
   );
 }
 
