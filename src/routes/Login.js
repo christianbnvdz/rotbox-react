@@ -6,7 +6,7 @@ import { IsLoggedInContext } from '../components/App';
 import RotboxAPI from '../services/api';
 import Storage from '../services/storage';
 
-function Files() {
+function Login() {
   const navigate = useNavigate();
   const [user, setUserValues] = useState({ username: '', password: '' });
   const [error, setErrorMsg] = useState('');
@@ -48,4 +48,4 @@ function Files() {
   );
 }
 
-export default Files;
+export default Login;
