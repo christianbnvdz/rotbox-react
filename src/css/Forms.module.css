@@ -1,0 +1,24 @@
+.title {
+  text-align: center;
+}
+
+.msg {
+  margin: 0em;
+  text-align: center;
+}
+
+.error {
+  color: #F00;
+}
+
+.form {
+  text-align: center;
+}
+
+.form_item {
+  margin-top: 1em;
+}
+
+.form_item > label {
+  margin-right: 1em;
+}
