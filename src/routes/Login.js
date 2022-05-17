@@ -31,7 +31,7 @@ function Login() {
   
   return (
     <section>
-      <h1 className={FormsCSS.title}>Log In</h1>
+      <h2 className={FormsCSS.title}>Log In</h2>
       <p className={`${FormsCSS.msg} ${FormsCSS.error}`}>{error}</p>
       <form className={FormsCSS.form}>
         <div className={FormsCSS.form_item}>
