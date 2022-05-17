@@ -1,0 +1,23 @@
+.nav_container {
+  background-color: #11AA86;
+}
+
+.logo_text {
+  margin: 0em;
+  padding-left: 0.25em;
+  display: inline;
+  font-family: system-ui;
+}
+
+.nav_list {
+  margin: 0em;
+  display: inline;
+  padding: 1em;
+  font-family: system-ui;
+}
+
+.nav_list > li {
+  display: inline;
+  margin-left: 0.75em;
+  font-family: system-ui;
+}

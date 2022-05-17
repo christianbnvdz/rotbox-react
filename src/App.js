@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 export const IsLoggedInContext = React.createContext();
 
 function App() {
-  const [isLoggedIn, setLoggedInStatus] = useState(true);
+  const [isLoggedIn, setLoggedInStatus] = useState(false);
 
   return (
     <IsLoggedInContext.Provider value={{isLoggedIn, setLoggedInStatus}}>

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { IsLoggedInContext } from './App';
+import NavbarCSS from './Navbar.module.css';
 
 function Navbar() {
   const isLoggedInContext = useContext(IsLoggedInContext);
@@ -7,9 +8,9 @@ function Navbar() {
 
   return (
     <>
-      <nav>
-        <h1>Rotbox</h1>
-        <ul>
+      <nav className={NavbarCSS.nav_container}>
+        <h1 className={NavbarCSS.logo_text}>Rotbox</h1>
+        <ul className={NavbarCSS.nav_list}>
           { isLoggedIn ?
             <>
               <li>Files</li>
