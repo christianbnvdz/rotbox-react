@@ -3,9 +3,16 @@ import { Link } from 'react-router-dom';
 import { IsLoggedInContext } from './App';
 import NavbarCSS from '../css/Navbar.module.css';
 
+import Storage from '../services/storage';
+
 function Navbar() {
   const isLoggedInContext = useContext(IsLoggedInContext);
   const isLoggedIn = isLoggedInContext.isLoggedIn;
+
+  function logout() {
+    isLoggedInContext.setLoggedInStatus(false);
+    Storage.deleteUserToken();
+  }
 
   return (
     <>
@@ -16,11 +23,11 @@ function Navbar() {
             <>
               <li><Link to="/files">Files</Link></li>
               <li><Link to="/upload">Upload</Link></li>
-              <li><Link to="/login" onClick={() => isLoggedInContext.setLoggedInStatus(false)}>Log Out</Link></li>
+              <li><Link to="/login" onClick={logout}>Log Out</Link></li>
             </>
             :
             <>
-              <li><Link to="/" onClick={() => isLoggedInContext.setLoggedInStatus(true)}>Log In</Link></li>
+              <li><Link to="/login">Log In</Link></li>
               <li><Link to="/register">Register</Link></li>
             </>
           }
