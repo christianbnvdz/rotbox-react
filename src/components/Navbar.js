@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { IsLoggedInContext } from './App';
-import NavbarCSS from './Navbar.module.css';
+import NavbarCSS from '../css/Navbar.module.css';
 
 function Navbar() {
   const isLoggedInContext = useContext(IsLoggedInContext);
@@ -20,7 +20,7 @@ function Navbar() {
             </>
             :
             <>
-              <li><Link to="/login" onClick={() => isLoggedInContext.setLoggedInStatus(true)}>Log In</Link></li>
+              <li><Link to="/" onClick={() => isLoggedInContext.setLoggedInStatus(true)}>Log In</Link></li>
               <li><Link to="/register">Register</Link></li>
             </>
           }
