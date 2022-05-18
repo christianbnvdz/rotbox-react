@@ -6,6 +6,12 @@ const loginUrl = `${apiBaseUrl}/users/login`;
 const registerUrl = `${apiBaseUrl}/users/register`;
 const authenticateTokenUrl = `${apiBaseUrl}/users/authenticate`;
 
+function generateHeaders() {
+  return {
+    'Authorization': `Bearer ${Storage.getUserToken()}`,
+  };
+};
+
 function constructGetFilesUrl() {
   return `${apiBaseUrl}/users/${localStorage.getItem(Storage.userIdLoc)}/files`;
 }
@@ -26,9 +32,22 @@ function register(username, password) {
 
 function authenticateToken() {
   return (Axios.get(authenticateTokenUrl, {
-    headers: {
-      'Authorization': `Bearer ${Storage.getUserToken()}`,
-    }
+    headers: generateHeaders(),
+  }));
+}
+
+function getFiles() {
+  return (Axios.get(constructGetFilesUrl(), {
+    headers: generateHeaders(),
+  }));
+}
+
+function downloadFile(fileId) {
+  return (Axios({
+    method: 'get',
+    url: `${constructGetFilesUrl()}/${fileId}`,
+    responseType: 'blob',
+    headers: generateHeaders(),
   }));
 }
 
@@ -36,5 +55,6 @@ export default {
   login,
   register,
   authenticateToken,
-  constructGetFilesUrl,
+  getFiles,
+  downloadFile,
 };

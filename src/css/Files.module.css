@@ -1,0 +1,33 @@
+.title {
+  text-align: center;
+}
+
+.rule {
+  width: 50%;
+}
+
+.msg {
+  text-align: center;
+}
+
+.list {
+  margin-left: 0em;
+  padding: 0;
+  list-style: none;
+}
+
+.list > li {
+  border-left: 0.35em solid #11AA86;
+  margin-left: 1.75em;
+  padding-left: 0.8em;
+}
+
+.list > li > p {
+  margin: 0em;
+  padding-bottom: 0.5em;
+}
+
+.list > li > button {
+  margin-bottom: 0.5em;
+}
+
