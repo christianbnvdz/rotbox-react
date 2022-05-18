@@ -31,11 +31,11 @@ function Register() {
       <p className={`${FormsCSS.msg} ${FormsCSS.error}`}>{errMsg}</p>
       <form className={FormsCSS.form}>
         <div className={FormsCSS.form_item}>
-          <label for="username">Username</label>
+          <label htmlFor="username">Username</label>
           <input type="text" id="username" name="username" value={user.username} onChange={updateUserValues} required />
         </div>
         <div className={FormsCSS.form_item}>
-          <label for="password">Password</label>
+          <label htmlFor="password">Password</label>
           <input type="password" id="password" name="password" value={user.password} onChange={updateUserValues} required />
         </div>
         <button className={FormsCSS.form_item} type="button" onClick={() => register(user.username, user.password)}>Register</button>
