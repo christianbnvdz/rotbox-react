@@ -51,10 +51,20 @@ function downloadFile(fileId) {
   }));
 }
 
+function uploadFile(form) {
+  return (Axios({
+    method: 'post',
+    url: constructGetFilesUrl(),
+    data: form,
+    headers: { ...generateHeaders(), "Content-Type": "multipart/form-data" },
+  }));
+}
+
 export default { 
   login,
   register,
   authenticateToken,
   getFiles,
   downloadFile,
+  uploadFile,
 };

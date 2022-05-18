@@ -2,8 +2,16 @@
   text-align: center;
 }
 
+.rule {
+  width: 50%;
+}
+
 .msg {
   margin: 0em;
+  text-align: center;
+}
+
+.msg_bottom {
   text-align: center;
 }
 
@@ -23,6 +31,19 @@
   margin-top: 1em;
 }
 
+.form_item > .block_label {
+  display: block;
+  margin-right: 0em;
+} 
+
 .form_item > label {
   margin-right: 1em;
+}
+
+.form_item > textarea {
+  margin-top: 0.25em;
+}
+
+.file_select {
+  margin-top: 0.75em;
 }
